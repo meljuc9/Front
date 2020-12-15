@@ -1,4 +1,4 @@
-import { Usuario } from './usuario'
+import { Profesional } from './profesional'
 
 export class Persona {
 	id: number;

@@ -2,10 +2,10 @@
 	<ng-template tdLoading="usuarios.list">
 		<mat-list>
 			<div class="pad" *ngIf="usuarios?.length === 0" layout="row" layout-align="center">
-				<h3> No hay usuarios para mostrar</h3>
+				<h3> No hay Profesionales para mostrar</h3>
 			</div>
 			<div id="acciones">	
-				<u id="par">Usuarios</u>			
+				<u id="par">Profesionales</u>			
 				<button id="buttonAgregar" mat-icon-button [routerLink]="['add']">
 					<mat-icon>plus_one</mat-icon>
 				</button>
@@ -13,8 +13,8 @@
 			<ng-template let-usu let-last="last" ngFor [ngForOf]="usuarios">
 				<mat-list-item>
 					<mat-icon matListAvatar id="logo">insert_emoticon</mat-icon>
-					<h3 matLine> ID: {{usu.id}}</h3>
-					<h3 matLine> Nombre: {{usu.username}}</h3>
+					<h3 matLine> Nombre: {{usu.name}}</h3>
+					<h3 matLine> Proofesión: {{usu.profesion}}</h3>
 					<button id="buttonDelete" mat-icon-button (click)="delete(usu)">
 						<mat-icon>delete</mat-icon>
 					</button>

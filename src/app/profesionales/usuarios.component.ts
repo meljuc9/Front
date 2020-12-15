@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Usuario } from './../dataservice/usuario';
+import { Profesional } from '../dataservice/profesional';
 import { DataService } from './../dataservice/data.service';
 
 @Component({
@@ -9,18 +9,18 @@ import { DataService } from './../dataservice/data.service';
 })
 export class UsuariosComponent implements OnInit {
 
-  usuarios : Usuario[];
-	getUsuarios(): void {
+  usuarios : Profesional[];
+	getProfesionales(): void {
 		this.DataService
-			.getUsuarios()
+			.getProfesionales()
 			.then(personas => this.usuarios = personas );
 	}
   delete(usu): void{
-    this.DataService.deleteUsuario(usu.id);
+    this.DataService.deleteProfesional(usu.id);
     this.usuarios = this.usuarios.filter(a => a !== usu);
   }
   constructor(private DataService: DataService) { }
   ngOnInit() {
-  	this.getUsuarios();
+  	this.getProfesionales();
   }
 }

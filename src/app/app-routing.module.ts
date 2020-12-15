@@ -5,8 +5,8 @@ import { SendEmailComponent } from '@auth/send-email/send-email.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { MainComponent } from './main/main.component';
-import { UsuariosComponent } from './usuarios/usuarios.component';
-import { UsuariosAddComponent } from './usuarios/usuarios-add/usuarios-add.component';
+import { UsuariosComponent } from './profesionales/usuarios.component';
+import { UsuariosAddComponent } from './profesionales/usuarios-add/usuarios-add.component';
 import { PersonasComponent } from './trabajadores/personas.component';
 import { PersonasAddComponent } from './trabajadores/personas-add/personas-add.component';
 
@@ -55,7 +55,7 @@ const routes: Routes = [
             }
           ]
       },
-      { path: 'usuarios',
+      { path: 'profesionales',
         children: [
           { path: '',
             component: UsuariosComponent,

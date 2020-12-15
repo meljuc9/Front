@@ -12,10 +12,10 @@
         <a class="nav-link" routerLink="/">Inicio</a>
       </li>
       <li id="person" class="nav-item active" *ngIf="user$ | async as user">
-        <a class="nav-link" routerLink="/personas">Trabajadores</a>
+        <a class="nav-link" routerLink="/trabajadores">Trabajadores</a>
       </li>
       <li id="usu" class="nav-item active" *ngIf="user$ | async as user">
-        <a class="nav-link" routerLink="/usuarios">Profesionales</a>
+        <a class="nav-link" routerLink="/profesionales">Profesionales</a>
       </li>
     </ul>
     <ul class="navbar-nav mx-auto" *ngIf="user$ | async as user; else login">

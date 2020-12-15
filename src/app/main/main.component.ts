@@ -19,9 +19,9 @@ export class MainComponent implements OnInit {
       subtitle:'Person'
     },
     {
-      title: 'Usuarios',
-      route: '/usuarios',
-      icon: 'collections',
+      title: 'Profesionales',
+      route: '/profesionales',
+      icon: 'face',
     },
 	]
   public user$: Observable<User> = this.authSvc.afAuth.user;

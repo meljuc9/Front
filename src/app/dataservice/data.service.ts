@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpHeaders, HttpClient } from '@angular/common/http';
 import { Persona } from './persona'; /*Model */
-import { Usuario } from './usuario'; /*Model */
+import { Profesional } from './profesional'; /*Model */
 
 @Injectable()
 export class DataService {
@@ -29,17 +29,23 @@ export class DataService {
 		.then(res => res as Persona)
 	}
 
-	getUsuarios(): Promise<Usuario[]> {
+	getProfesionales(): Promise<Profesional[]> {
 		return this.http.get('http://127.0.0.1:8000/usuario?format=json', {headers: this.headers})
 		.toPromise()
-		.then(response => response as Usuario[])
+		.then(response => response as Profesional[])
 	}
 	
-	deleteUsuario(id: number): Promise<void> {
+	deleteProfesional(id: number): Promise<void> {
 		const url = `${"http://127.0.0.1:8000/usuario"}/${id}`;
 		return this.http.delete(url, {headers: this.headers})
 		.toPromise()
 		.then(() => null)
+	}
+	createProfesional(d: Profesional): Promise<Profesional> {
+		return this.http
+		.post("http://127.0.0.1:8000/persona", JSON.stringify(d), {headers: this.headers})
+		.toPromise()
+		.then(res => res as Profesional)
 	}
 }
 	
