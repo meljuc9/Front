@@ -1,0 +1,30 @@
+<mat-card id="will-load">
+	<ng-template tdLoading="personas.list">
+		<mat-list>
+			<div class="pad" *ngIf="personas?.length === 0" layout="row" layout-align="center">
+				<h3> No hay trabajadores para mostrar</h3>
+			</div>
+			<div id="acciones">
+				<u id="par">Trabajadores </u>
+				<button id="buttonAgregar" mat-icon-button [routerLink]="['add']">
+					<mat-icon>plus_one</mat-icon>
+				</button>
+			</div>
+			<ng-template let-per id="linea" let-last="last" ngFor [ngForOf]="personas">
+				<mat-list-item>
+					<mat-icon matListAvatar id="estrella">grade</mat-icon>
+					<h3 matLine> ID: {{per.id}}</h3>
+					<h3 matLine> Nombre: {{per.name}}</h3>
+					<h3 matLine> Número del documento de ciudadanía: {{per.document}}</h3>
+					<h3 matLine> Edad: {{per.age}}</h3>
+					<h3 matLine> Profesión: {{per.profesion}}</h3>
+					<h3 matLine> Descripción de la profesión: {{per.description}}</h3>
+					<button id="buttonDelete" mat-icon-button (click)="delete(per)">
+						<mat-icon>delete</mat-icon>
+					</button>
+				</mat-list-item>
+				<mat-divider *ngIf="!last" [inset]="true"></mat-divider>
+			</ng-template>
+		</mat-list>
+	</ng-template>
+</mat-card>

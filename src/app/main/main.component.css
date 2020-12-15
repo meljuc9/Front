@@ -1,0 +1,49 @@
+.mat-list-base .mat-list-item{
+	color:blueviolet
+}
+.mat-list-base .mat-list-item:hover{
+	color: #800080;
+	transition: 0s;
+	border: 1px white solid;
+}
+#botones{
+	font-size: 10em;
+}
+
+#Volver{
+	background-color: blueviolet;
+	color: white;
+	margin-left: 76em;
+	margin-top: 3em;
+	font-size: 0.9em;
+}
+#Volver:hover{
+	background-color: #800080;
+	transition: 0s;
+	color: white;
+}
+
+.mat-list-base{
+	color: blueviolet;
+}
+.mat-list-base:hover{
+	transition: 0s;
+	color: #800080;
+}
+#menu{
+	background-color: blueviolet;
+	color: white;
+}
+#menu:hover{
+	transition: 0s;
+	background-color: #800080;
+	width: 100%;
+}
+
+#logo{
+	margin-top: 1em;
+}
+
+#text{
+	margin-top: -4px;
+}

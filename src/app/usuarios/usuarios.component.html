@@ -1,0 +1,27 @@
+<mat-card id="will-load">
+	<ng-template tdLoading="usuarios.list">
+		<mat-list>
+			<div class="pad" *ngIf="usuarios?.length === 0" layout="row" layout-align="center">
+				<h3> No hay usuarios para mostrar</h3>
+			</div>
+			<div id="acciones">	
+				<u id="par">Usuarios</u>			
+				<button id="buttonAgregar" mat-icon-button [routerLink]="['add']">
+					<mat-icon>plus_one</mat-icon>
+				</button>
+			</div><br>
+			<ng-template let-usu let-last="last" ngFor [ngForOf]="usuarios">
+				<mat-list-item>
+					<mat-icon matListAvatar id="logo">insert_emoticon</mat-icon>
+					<h3 matLine> ID: {{usu.id}}</h3>
+					<h3 matLine> Nombre: {{usu.username}}</h3>
+					<button id="buttonDelete" mat-icon-button (click)="delete(usu)">
+						<mat-icon>delete</mat-icon>
+					</button>
+				</mat-list-item>
+
+				<mat-divider *ngIf="!last" [inset]="true"></mat-divider>
+			</ng-template>
+		</mat-list>
+	</ng-template>
+</mat-card>

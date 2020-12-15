@@ -1,0 +1,86 @@
+<mat-card id="will-load">
+	<mat-card-title id="title">
+	<strong>Nuevo trabajador</strong>
+	</mat-card-title>
+    <mat-divider></mat-divider>
+        <mat-card-content>
+            <form id="form" #personaForm="ngForm">
+                <br>
+                <br>
+                <div layout="row">
+                    <mat-form-field flex>
+                        <mat-label>Nombre</mat-label>
+                        <input matInput [(ngModel)]="persona.name" #elementNameControl="ngModel"
+                            type="text" name="name" maxlength="50" minlength="3" required >
+                        <mat-hint alig="start">
+                            <span [hidden]="elementNameControl.pristine || !elementNameControl.errors?.required" class="tc-red-600"> 
+                                El nombre es <strong>obligatorio.</strong>
+                            </span>
+                        </mat-hint>
+                    </mat-form-field>
+                </div>
+                <br>
+                <div layout="row">
+                    <mat-form-field flex>
+                        <mat-label>Número del documento de ciudadanía</mat-label>
+                        <input matInput [(ngModel)]="persona.document" maxlength="15" minlength="1" #elementAgeControl="ngModel" type="number" 
+                        name="document" required >
+                        <!--<mat-hint alig="start">
+                            <span [hidden]="elementDocumentControl.pristine || !elementDocumentControl.errors?.required" class="tc-red-600"> 
+                                El número de documento es <strong>obligatorio.</strong>
+                            </span>
+                            <br>
+                        </mat-hint>-->
+                    </mat-form-field>
+                </div>
+                <br>
+                <div layout="row">
+                    <mat-form-field flex>
+                        <mat-label>Edad</mat-label>
+                        <input matInput [(ngModel)]="persona.age" maxlength="3" minlength="1" #elementAgeControl="ngModel" type="number" 
+                        name="age" required >
+                        <mat-hint alig="start">
+                            <span [hidden]="elementAgeControl.pristine || !elementAgeControl.errors?.required" class="tc-red-600"> 
+                                La edad es <strong>obligatoria.</strong>
+                            </span>
+                            <br>
+                        </mat-hint>
+                    </mat-form-field>
+                </div>
+                <br>
+                <div layout="row">
+                    <mat-form-field flex>
+                        <mat-label required>Profesión</mat-label>
+                        <input matInput [(ngModel)]="persona.profesion" #elementDateControl="ngModel" type="text" 
+                        name="profesion" required>
+                        <!--<mat-hint alig="start">
+                            <span [hidden]="elementProfesionControl.pristine || !elementProfesionControl.errors?.required" class="tc-red-600"> 
+                                La profesión es <strong>obligatoria.</strong>
+                            </span>
+                        </mat-hint>-->
+                    </mat-form-field>
+                </div>
+                <br>
+                <div layout="row">
+                    <mat-form-field flex>
+                        <mat-label required>Descripción de la profesión</mat-label>
+                        <input matInput [(ngModel)]="persona.description" #elementDateControl="ngModel" type="text" 
+                        name="description" required>
+                        <!--<mat-hint alig="start">
+                            <span [hidden]="elementDescriptionControl.pristine || !elementDescriptionControl.errors?.required" class="tc-red-600"> 
+                                La descripción es <strong>obligatoria.</strong>
+                            </span>
+                        </mat-hint>-->
+                    </mat-form-field>
+                </div>
+            </form>
+        </mat-card-content>
+    <mat-divider></mat-divider>
+    <br>
+	<mat-card-actions id="acciones">
+        <button mat-button (click)="redirect()" id="Volver">
+            <mat-icon>reply</mat-icon><strong>Volver</strong></button>
+        <button mat-button id="Guardar" [disabled]="!personaForm.valid" (click)="save()">
+        <mat-icon>save</mat-icon><strong>Guardar</strong></button>
+    </mat-card-actions>
+</mat-card>

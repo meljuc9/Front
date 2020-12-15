@@ -1,0 +1,35 @@
+#Volver{
+    background-color: blueviolet;
+    color: white;
+    margin-left: 10em;
+}
+#Guardar{
+    color: blueviolet;
+    margin-left: 10em;
+    border:  1px blueviolet solid;
+}
+#Guardar:hover{
+    transition: 0s;
+    background-color: #800080;
+    color: white;
+}
+#title{
+    text-align: center;
+    color: blueviolet;
+}
+
+#title:hover{
+    transition: 0s;
+	color: #800080;
+}
+
+#will-load{
+    border: 1px blueviolet solid;
+    width: 45em;
+    margin-left: 19em;
+    margin-top: 3em;
+}
+
+#form{
+    width: 80em;
+}

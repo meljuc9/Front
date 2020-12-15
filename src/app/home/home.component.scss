@@ -1,0 +1,12 @@
+#hello{
+    font-size: 3em;
+    text-align: center;
+    margin-left: 2em;
+    margin-top: 6em;
+    color: blueviolet;
+}
+
+#hello:hover{
+    transition: 0.1s;
+    color: #800080;
+  }

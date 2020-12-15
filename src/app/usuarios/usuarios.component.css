@@ -1,0 +1,47 @@
+#logo{
+    color: blueviolet;
+}
+#logo:hover{
+    transition: 0s;
+    color: #800080;
+}
+
+#buttonAgregar{
+    background-color: blueviolet;
+    color: white;
+    margin-left: 51em;
+    width: 4.2em;
+    height: 4.2em;
+    margin-top: 0.4em;
+}
+#buttonAgregar:hover{
+	background-color: #800080;
+	transition: 0s;
+}
+
+#buttonDelete{
+    background-color: rgb(255, 38, 0);
+    color: white;
+}
+#buttonDelete:hover{
+    transition: 0s;
+    background-color: #800080;
+}
+
+#will-load{
+    border: 1px blueviolet solid;
+    width: 71em;
+    margin-left: 5em;
+    margin-top: 2em;
+}
+#will-load:hover{
+    transition: 0.1s;
+	color: white;
+	border: 1px #800080 solid;
+}
+
+#par{
+    font-size: 1.8em;
+    color: blueviolet;
+    margin-left: 0.5em;
+}
